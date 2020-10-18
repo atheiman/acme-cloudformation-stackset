@@ -1,5 +1,5 @@
 {
-  "typeName": "AWS::CloudFormation::StackSet",
+  "typeName": "Acme::CloudFormation::StackSet",
   "description": "StackSet as a resource provides one-click experience for provisioning a StackSet and StackInstances",
   "sourceUrl": "https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-cloudformation.git",
   "resourceLink": {

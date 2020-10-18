@@ -20,9 +20,9 @@ public class Validator {
     private static void validateResource(final String type) {
         switch (type) {
             case "AWS::CloudFormation::Stack":
-            case "AWS::CloudFormation::StackSet":
+            case "Acme::CloudFormation::StackSet":
                 throw new CfnInvalidRequestException(
-                        String.format("Nested %s is not supported in AWS::CloudFormation::StackSet", type));
+                        String.format("Nested %s is not supported in Acme::CloudFormation::StackSet", type));
         }
     }
 

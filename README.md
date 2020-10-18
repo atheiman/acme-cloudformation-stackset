@@ -1,4 +1,4 @@
-# AWS::CloudFormation::StackSet
+# Acme::CloudFormation::StackSet
 
 Congratulations on starting development! Next steps:
 
