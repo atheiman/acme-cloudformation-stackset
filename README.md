@@ -26,6 +26,9 @@ java -version
 # OpenJDK Runtime Environment (AdoptOpenJDK)(build 1.8.0_265-b01)
 # OpenJDK 64-Bit Server VM (AdoptOpenJDK)(build 25.265-b01, mixed mode)ll
 
+echo $JAVA_HOME
+# /Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+
 pip install cloudformation-cli cloudformation-cli-java-plugin cloudformation-cli-go-plugin cloudformation-cli-python-plugin
 cfn --version
 # cfn 0.1.11
