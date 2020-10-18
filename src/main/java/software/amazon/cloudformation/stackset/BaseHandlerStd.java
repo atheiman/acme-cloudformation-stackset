@@ -133,7 +133,7 @@ public abstract class BaseHandlerStd extends BaseHandler<CallbackContext> {
 
         for (final StackInstances stackInstances : stackInstancesList) {
             final ProgressEvent<ResourceModel, CallbackContext> progressEvent = proxy
-                    .initiate("AWS-CloudFormation-StackSet::CreateStackInstances" + stackInstances.hashCode(), client, model, callbackContext)
+                    .initiate("acme-cloudformation-stackset::CreateStackInstances" + stackInstances.hashCode(), client, model, callbackContext)
                     .translateToServiceRequest(modelRequest -> createStackInstancesRequest(modelRequest.getStackSetId(), modelRequest.getOperationPreferences(), stackInstances))
                     .backoffDelay(MULTIPLE_OF)
                     .makeServiceCall((modelRequest, proxyInvocation) -> {
@@ -175,7 +175,7 @@ public abstract class BaseHandlerStd extends BaseHandler<CallbackContext> {
 
         for (final StackInstances stackInstances : stackInstancesList) {
             final ProgressEvent<ResourceModel, CallbackContext> progressEvent = proxy
-                    .initiate("AWS-CloudFormation-StackSet::DeleteStackInstances" + stackInstances.hashCode(), client, model, callbackContext)
+                    .initiate("acme-cloudformation-stackset::DeleteStackInstances" + stackInstances.hashCode(), client, model, callbackContext)
                     .translateToServiceRequest(modelRequest -> deleteStackInstancesRequest(modelRequest.getStackSetId(), modelRequest.getOperationPreferences(), stackInstances))
                     .backoffDelay(MULTIPLE_OF)
                     .makeServiceCall((modelRequest, proxyInvocation) -> {
@@ -228,7 +228,7 @@ public abstract class BaseHandlerStd extends BaseHandler<CallbackContext> {
 
         for (final StackInstances stackInstances : stackInstancesList) {
             final ProgressEvent<ResourceModel, CallbackContext> progressEvent = proxy
-                    .initiate("AWS-CloudFormation-StackSet::UpdateStackInstances" + stackInstances.hashCode(), client, model, callbackContext)
+                    .initiate("acme-cloudformation-stackset::UpdateStackInstances" + stackInstances.hashCode(), client, model, callbackContext)
                     .translateToServiceRequest(modelRequest -> updateStackInstancesRequest(modelRequest.getStackSetId(), modelRequest.getOperationPreferences(), stackInstances))
                     .backoffDelay(MULTIPLE_OF)
                     .makeServiceCall((modelRequest, proxyInvocation) -> {

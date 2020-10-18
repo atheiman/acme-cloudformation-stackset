@@ -28,7 +28,7 @@ public class CreateHandler extends BaseHandlerStd {
         final StackInstancesPlaceHolder placeHolder = new StackInstancesPlaceHolder();
         analyzeTemplate(proxyClient, request, placeHolder, Action.CREATE);
 
-        return proxy.initiate("AWS-CloudFormation-StackSet::Create", proxyClient, model, callbackContext)
+        return proxy.initiate("acme-cloudformation-stackset::Create", proxyClient, model, callbackContext)
                 .translateToServiceRequest(resourceModel -> createStackSetRequest(resourceModel, request.getClientRequestToken()))
                 .makeServiceCall((modelRequest, proxyInvocation) -> {
                     final CreateStackSetResponse response = proxyClient.injectCredentialsAndInvokeV2(modelRequest, proxyClient.client()::createStackSet);

@@ -61,7 +61,7 @@ public class UpdateHandler extends BaseHandlerStd {
         if (isStackSetConfigEquals(previousModel, desiredModel)) {
             return ProgressEvent.progress(desiredModel, callbackContext);
         }
-        return proxy.initiate("AWS-CloudFormation-StackSet::UpdateStackSet", client, desiredModel, callbackContext)
+        return proxy.initiate("acme-cloudformation-stackset::UpdateStackSet", client, desiredModel, callbackContext)
                 .translateToServiceRequest(modelRequest -> updateStackSetRequest(modelRequest))
                 .makeServiceCall((modelRequest, proxyInvocation) -> {
                     final UpdateStackSetResponse response = proxyInvocation.injectCredentialsAndInvokeV2(modelRequest, proxyInvocation.client()::updateStackSet);

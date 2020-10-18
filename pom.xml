@@ -6,8 +6,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>software.amazon.cloudformation.stackset</groupId>
-    <artifactId>aws-cloudformation-stackset-handler</artifactId>
-    <name>aws-cloudformation-stackset-handler</name>
+    <artifactId>acme-cloudformation-stackset-handler</artifactId>
+    <name>acme-cloudformation-stackset-handler</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -220,7 +220,7 @@
             <resource>
                 <directory>${project.basedir}</directory>
                 <includes>
-                    <include>aws-cloudformation-stackset.json</include>
+                    <include>acme-cloudformation-stackset.json</include>
                 </includes>
             </resource>
         </resources>
