@@ -1,43 +1,12 @@
-## AWS CloudFormation Resource Provider Package For AWS CloudFormation
+# AWS::CloudFormation::StackSet
 
-This repository contains AWS-owned resource providers for the `AWS::CloudFormation::*` namespace.
+Congratulations on starting development! Next steps:
 
-[![Build Status](https://travis-ci.com/aws-cloudformation/aws-cloudformation-resource-providers-cloudformation.svg?branch=master)](https://travis-ci.com/aws-cloudformation/aws-cloudformation-resource-providers-cloudformation)
+1. Write the JSON schema describing your resource, `aws-cloudformation-stackset.json`
+1. Implement your resource handlers.
 
-Usage
------
+The RPDK will automatically generate the correct resource model from the schema whenever the project is built via Maven. You can also do this manually with the following command: `cfn generate`.
 
-The CloudFormation CLI (cfn) allows you to author your own resource providers that can be used by CloudFormation.
+> Please don't modify files under `target/generated-sources/rpdk`, as they will be automatically overwritten.
 
-Refer to the documentation for the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk) for usage instructions.
-
-
-Development
------------
-
-First, you will need to install the [CloudFormation CLI](https://github.com/aws-cloudformation/aws-cloudformation-rpdk), as it is a required dependency:
-
-```shell
-pip3 install cloudformation-cli
-pip3 install cloudformation-cli-java-plugin
-```
-
-Linting and running unit tests is done via [pre-commit](https://pre-commit.com/), and so is performed automatically on commit. The continuous integration also runs these checks.
-
-```shell
-pre-commit install
-```
-
-Manual options are available so you don't have to commit:
-
-```shell
-# run all hooks on all files, mirrors what the CI runs
-pre-commit run --all-files
-# run unit tests and coverage checks
-mvn verify
-```
-
-License
--------
-
-This library is licensed under the Apache 2.0 License.
+The code uses [Lombok](https://projectlombok.org/), and [you may have to install IDE integrations](https://projectlombok.org/) to enable auto-complete for Lombok-annotated classes.
