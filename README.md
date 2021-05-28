@@ -1,6 +1,10 @@
 # Acme::CloudFormation::StackSet
 
-This repo serves as an example of how to deploy [the CloudFormation resource `AWS::CloudFormation::StackSet`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html) to a GovCloud account, where the resource is not yet available. This is possible because the code for the `AWS::CloudFormation::StackSet` resource is open source, available at https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-cloudformation/tree/master/aws-cloudformation-stackset.
+This repo serves as an example of how to deploy [the CloudFormation resource `AWS::CloudFormation::StackSet`](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-stackset.html) to a GovCloud account, where the resource is not yet available (**Update May 28 2021 - the resource is now available in GovCloud CloudFormation**). This is possible because the code for the `AWS::CloudFormation::StackSet` resource is open source, available at https://github.com/aws-cloudformation/aws-cloudformation-resource-providers-cloudformation/tree/master/aws-cloudformation-stackset.
+
+## DEPRECATED
+
+I noticed today (May 28 2021) that `AWS::CloudFormation::StackSet` is available in [`us-gov-west-1`](https://console.amazonaws-us-gov.com/cloudformation/home?region=us-gov-west-1#/registry/resourceTypes/details?arn=arn%3Aaws-us-gov%3Acloudformation%3Aus-gov-west-1%3A%3Atype%2Fresource%2FAWS-CloudFormation-StackSet) and [`us-gov-east-1`](https://us-gov-east-1.console.amazonaws-us-gov.com/cloudformation/home?region=us-gov-east-1#/registry/resourceTypes/details?arn=arn%3Aaws-us-gov%3Acloudformation%3Aus-gov-east-1%3A%3Atype%2Fresource%2FAWS-CloudFormation-StackSet) - so this workaround is no longer necessary.
 
 ## Notes
 
